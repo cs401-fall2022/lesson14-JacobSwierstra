@@ -1,7 +1,3 @@
-:root {
-   --swidth: ;
- }
-
 html {
    background-color: #161616;
    font-family:Arial, Helvetica, sans-serif;
@@ -10,13 +6,13 @@ html {
 
 h1{
    margin-top: 75px;
-   font-size: 18px;
+   font-size: 27.5px;
    color: #FFFFFF;
    text-align: center;
 }
 
 h2{
-    font-size: 16px;
+    font-size: 18px;
     color: #FFFFFF;
     text-align: left;
  }
@@ -62,10 +58,13 @@ article {
    margin-top: 1.5%;
    margin-bottom: 3%;
 }
+
 .sideHead{
-   font-size: 18px;
+   text-align: center;
+   font-size: 20px;
    padding-left: 4px;
    padding-right: 4px;
+   margin-bottom: 20px;
 }
 
 
@@ -81,9 +80,8 @@ article {
    padding-right: 5px;
    padding-left: 5px;
    inline-size: 150px; 
-   overflow-wrap: break-word;
-   hyphens: manual;
-   max-height: 500px;position: sticky;
+   max-height: 500px;
+   position: sticky;
    top: 50px;
    z-index: 999;
 }
@@ -92,10 +90,10 @@ article {
    color: yellow;
 }
 
-.left_list{
-   margin-left: -15px;
+.left_list li{
+   margin-left: -22.5px;
    list-style: none;
-   list-style-position: inside;
+   margin-top: 20px;
 }
 
 
@@ -122,8 +120,6 @@ article {
    padding-right: 5px;
    padding-left: 5px;
    inline-size: 150px; 
-   overflow-wrap: break-word;
-   hyphens: manual;
    position: sticky;
    top: 50px;
    z-index: 999;
@@ -131,16 +127,20 @@ article {
 
 .stext_right {
    color: yellow;
+   text-align: left;
 }
 
-.right_list {
+.right_list li{
    list-style: none;
-   list-style-position: inside;
+   margin-left: -40px;
+   text-align: left;
+   margin-top: 17.5px;
 }
 
 .stext_right a{
    color: yellow;
    text-decoration: none;
+   margin-top: 20px;
 }
 
 .stext_right a:hover{
