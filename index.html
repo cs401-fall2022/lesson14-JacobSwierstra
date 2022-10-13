@@ -2,45 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Auto Purchase Offer and Loan Comparison</title>
+  <title>Getting Started with JavaScript</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-<h1>TypeScript for JavaScript Programmers</h1>
-    <p>TypeScript stands in an unusual relationship to JavaScript.
-        TypeScript offers all of JavaScript’s features, and an additional
-        layer on top of these: TypeScript’s type system.</p>
-    <p>For example, JavaScript provides language primitives like string
-        and number, but it doesn’t check that you’ve consistently
-        assigned these. TypeScript does.</p>
-    <p>This means that your existing working JavaScript code is also
-        TypeScript code. The main benefit of TypeScript is that it can
-        highlight unexpected behavior in your code, lowering the chance
-        of bugs.</p>
-    <p>This tutorial provides a brief overview of TypeScript, focusing
-        on its type system.</p>
-<h2>Types by Inference</h2>
-    <p>TypeScript knows the JavaScript language and will generate types 
-        for you in many cases. For example in creating a variable and 
-        assigning it to a particular value, TypeScript will use the value 
-        as its type.</p>
-    <p>By understanding how JavaScript works, TypeScript can build a
-        type-system that accepts JavaScript code but has types. This 
-        offers a type-system without needing to add extra characters to 
-        make types explicit in your code. That’s how TypeScript knows 
-        that <code>helloWorld</code> is a <code>string</code> in the 
-        above example.</p>
-<h2>Defining Types</h2>
-    <p>You can use a wide variety of design patterns in JavaScript. 
-        However, some design patterns make it difficult for types to be 
-        inferred automatically (for example, patterns that use dynamic 
-        programming). To cover these cases, TypeScript supports an 
-        extension of the JavaScript language, which offers places for you 
-        to tell TypeScript what the types should be.</p>
-    <p>For example, to create an object with an inferred type which 
-        includes <code>name: string</code> and <code>id: number</code>, 
-        you can write:</p>
+    <div class = "head">This is my recreation of my webpage</div>
+    <h1>TypeScript for JavaScript Programmers</h1>
+    <a class="jumptop" id="TOP"></a>
+<div class = "grid_Layout">
+    <div class = "side_left">
+        <div class = "stext_left">
+            <p class = "sideHead">Getting Started with JavaScript</p>
+            <ul class = "left_list"> 
+                <li><a href="about:blank" target="_blank" >TS for the New Programmer</a></li>
+                <li><a href="about:blank" target="_blank">TypeScript for JS Programmers</a></li>
+                <li><a href="about:blank" target="_blank">TS for Java/C# Programmers</a></li>
+                <li><a href="about:blank" target="_blank">TS for Functional Programmers</a></li>
+                <li><a href="about:blank" target="_blank">TypeScript Tooling in 5 minuets</a></li>
+            </ul>
+        </div>
+    </div>
+    <article>
+        <p>TypeScript stands in an unusual relationship to JavaScript.TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system.</p> 
+        <p>For example, JavaScript provides language primitives like string and number, but it doesn’t check that you’ve consistently assigned these. TypeScript does.</p>
+        <p>This means that your existing working JavaScript code is also TypeScript code. The main benefit of TypeScript is that it can highlight unexpected behavior in your code, lowering the chance of bugs.</p>
+        <p>This tutorial provides a brief overview of TypeScript, focusing on its type system.</p>
+        <a class="jump" id="Types_by_Inference"></a>
+        <h2>Types by Inference</h2>
+        <p>TypeScript knows the JavaScript language and will generate types for you in many cases. For example in creating a variable and assigning it to a particular value, TypeScript will use the value as its type.</p>
+            <div class="codediv">
+                <code>
+                    <div class="line">
+                        <span style="color: #4441fffb">
+                            let
+                        </span>
+                        <span style="color: blue">
+                            helloWorld
+                        </span>
+                        <span style="color: #FFFFFF"> 
+                            = 
+                        </span>
+                        <span style="color: #A31515">
+                            "Hello World"
+                        </span>
+                        <span style="color: #FFFFFF">
+                            ;
+                        </span>
+                    </div>
+                </code>
+            </div>
+        <p>By understanding how JavaScript works, TypeScript can build a type-system that accepts JavaScript code but has types. This offers a type-system without needing to add extra characters to make types explicit in your code. That’s how TypeScript knows that <code>helloWorld</code> is a <code>string</code> in the above example.</p>
+        <a class="jump" id="Defining_Types"></a>
+        <h2>Defining Types</h2>
+        <p>You can use a wide variety of design patterns in JavaScript. However, some design patterns make it difficult for types to be inferred automatically (for example, patterns that use dynamic programming). To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places for you to tell TypeScript what the types should be.</p>
+        <p>For example, to create an object with an inferred type which includes <code>name: string</code> and <code>id: number</code>, you can write:</p>
+            <div class="codediv">
+                <code>
+                    <div class="line">
+                        <span style="color: #4441fffb">const</span>
+                        <span style="color: blue"> user</span>
+                        <span style="color: #FFFFFF"> = </span>
+                        <span style="color: gray">{ </span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">name: </span><span style="color: #f74d64de">"Hayes"</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">id: </span>
+                        <span style="color: green">0</span><span style="color: whitesmoke">,</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: white">};</span>
+                    </div>
+                </code>
+            </div>
+            <p>You can explicitly describe this object’s shape using an <code>interface</code> declaration:</p>
+            <div class="codediv">
+                <code>
+                    <div class="line">
+                        <span style="color: #4441fffb">interface</span>
+                        <span style="color: #f74d64de"> User</span>
+                        <span style="color: gray">{ </span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">name: </span><span style="color: #f74d64de">string;</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">id: </span>
+                        <span style="color: #f74d64de">number</span><span style="color: whitesmoke">,</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: white">};</span>
+                    </div>
+                </code>
+            </div>
+            <p>You can then declare that a JavaScript object conforms to the shape of your new <code>interface</code> by using syntax like <code>: TypeName</code> after a variable declaration:</p>
+            <div class="codediv">
+                <code>
+                    <div class="line">
+                        <span style="color: #4441fffb"> const</span>
+                        <span style="color: blue">user</span><span style="color: whitesmoke">:</span>
+                        <span style="color: #f74d64de"> User</span>
+                        <span style="color: #FFFFFF"> = </span>
+                        <span style="color: gray">{ </span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">name: </span><span style="color: #f74d64de">"Hayes"</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: black">c</span>
+                        <span style="color: #d678fc">id: </span>
+                        <span style="color: green">0</span><span style="color: whitesmoke">,</span>
+                    </div>
+                    <div class="line">
+                        <span style="color: white">};</span>
+                    </div>
+                </code>
+            </div>
+            <a class="jump" id="Structural_Type_System"></a>
+            <h2>Structural Type System</h2>
+            <p>One of TypeScript’s core principles is that type checking focuses on the shape that values have. This is sometimes called “duck typing” or “structural typing”.</p>
+            <p>In a structural type system, if two objects have the same shape, they are considered to be of the same type.</p>
+                <div class="codediv">
+                    <code>
+                        <div class="line">
+                            <span style="color: #4441fffb">interface</span>
+                            <span style="color: rgba(131, 131, 250, 0.548)">Point</span>
+                            <span style="color: whitesmoke">{</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: black">c</span>
+                            <span style="color: #d678fc">x: </span><span style="color: rgba(131, 131, 250, 0.548)">number</span><span style="color: whitesmoke">;</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: black">c</span>
+                            <span style="color: #d678fc">id: </span>
+                            <span style="color: rgba(131, 131, 250, 0.548)">number</span><span style="color: whitesmoke">;</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: white">}</span>
+                        </div>
+                        <div class="line">
+                            <span style="opacity: 0;">}</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: #4441fffb">function:</span>
+                            <span style="color: rgb(145, 145, 4)">logPoint</span><span style="color: whitesmoke">(<span style="color: rgba(131, 131, 250, 0.548)">p</span>:<span style="color: rgba(131, 143, 250, 0.548)"> Point</span>) {</span>
+                        </div>
+                        <div class="line">
+                            <span style="opacity: 0;">c</span>
+                            <span style="color: rgb(72, 113, 202)">console</span><span style="color: whitesmoke">.<span style="color: rgb(145, 145, 4)">log</span>(<span style="color: rgba(250, 131, 131, 0.548)">`</span><span style="color: rgba(131, 143, 250, 0.548)">${p</span>.<span style="color: rgba(131, 143, 250, 0.548)">x}</span>, <span style="color: rgba(131, 143, 250, 0.548)">${p</span>.<span style="color: rgba(131, 143, 250, 0.548)">y}</span><span style="color: rgba(250, 131, 131, 0.548)">`</span>);</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: whitesmoke">}</span>
+                        </div>
+                        <div class="line">
+                            <span style="opacity: 0;">}</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: green">// logs "12, 26"</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: #4441ffab">const:</span>
+                            <span style="color: #4441fffb">point</span>
+                            <span style="color: #FFFFFF">= { </span>
+                            <span style="color: #4441fffb">x</span><span style="color: #FFFFFF">:</span>
+                            <span style="color: green">12</span><span style="color: #FFFFFF">,</span>
+                            <span style="color: 4441fffb">y</span><span style="color: #FFFFFF">:
+                            </span><span style="color: green">26</span>
+                            <span style="color: #FFFFFF"> };</span>
+                        </div>
+                        <div class="line">
+                            <span style="color: rgb(145, 145, 4)">logPoint</span><span style="color: #FFFFFF">(<span style="color: #4441ffab">point</span>);</span>
+                        </div>
+                    </code>
+                </div>
+                <p>The <code>point</code> variable is never declared to be a <code>Point</code> type. However, TypeScript compares the shape of <code>point</code> to the shape of <code>Point</code> in the type-check. They have the same shape, so the code passes. </p>
+                <p>There is no difference between how classes and objects conform to shapes </p>
+                <p>If the object or class has all the required properties, TypeScript will say they match, regardless of the implementation details. </p>
+    </article>
+    <div class = "side_right">
+        <div class = "stext_left">
+            <p class = "sideHead">What is on this Page?</p>
+            <ul class = "left_list"> 
+                <li><a href="#TOP">Top of this Page</a></li>
+                <li><a href="#Types_by_Inference">Types by Inference</a></li>
+                <li><a href="#Defining_Types">Defining Types</a></li>
+                <li><a href="#Structural_Type_System">Structural Type System</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('a[href*="#"]').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 50
+    }, 500);
+    return false;
+    });
+</script>
+
 </body>
 
 </html>
