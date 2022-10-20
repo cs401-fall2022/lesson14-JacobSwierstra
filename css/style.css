@@ -148,6 +148,16 @@ article {
    text-decoration: underline;
 }
 
+.head a{
+   color: black;
+   text-decoration: none;
+}
+
+.head a:hover{
+   color: hotpink;
+   text-decoration: underline;
+}
+
 .head {
    position: sticky;
    top: 0;

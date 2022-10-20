@@ -5,6 +5,7 @@
   "main": "app.js",
   "author": "Shane K. Panter",
   "license": "MIT",
+  "type":"module",
   "scripts": {
     "unit": "jest",
     "compile": "tsc",
